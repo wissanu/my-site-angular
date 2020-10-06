@@ -1,0 +1,111 @@
+
+.form-between {
+  padding-left: 2.25em;
+}
+
+.card-width {
+  width:80%
+}
+
+.img-order {
+  z-index: 2;
+  width: 100%;
+  margin: auto;
+  transform: skewX(-5deg) skewY(-5deg); /*Shorthand: skew(-5deg, -5deg);*/
+  box-shadow: 0px 5px 14px rgba(9, 33, 58, 0.1);
+  opacity: 0.7;
+}
+
+.shape__shadow {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #816aa9;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  transform: skewX(-5deg) skewY(-5deg) rotate(-20deg); /*Shorthand: skew(-5deg, -5deg) rotate(-20deg);*/
+}
+/* modify layout */
+.padding-layout {
+  padding: 20px 20px;
+}
+
+.space_body_order {
+  padding: clamp(0.5em, 5vw, 2em);
+}
+
+.card-color {
+  background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+
+/* modify text title css */
+.mat-title {
+  color: white;
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: 300;
+  letter-spacing: 0.3ch;
+}
+
+.mat-title-header {
+  color: white;
+  font-size: 32px;
+  font-family: Roboto;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.3ch;
+}
+
+
+/* On screens that are 992px or less */
+@media screen and (max-width: 960px) {
+  .mat-title {
+    font-size: 16px;
+  }
+  .mat-title-header {
+    font-size: 24px;
+  }
+  .padding-layout {
+    padding: 20px 20px;
+  }
+}
+
+/* On screens that are 750px or less */
+@media screen and (max-width: 750px) {
+  .mat-title {
+    font-size: 14px;
+  }
+  .mat-title-header {
+    font-size: 20px;
+  }
+  .padding-layout {
+    padding: 20px 20px;
+  }
+  .padding-layout-header {
+    padding: 80px 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mat-title {
+    font-size: 14px;
+  }
+  .mat-title-header {
+    font-size: 18px;
+  }
+  .padding-layout {
+    padding: 20px 20px;
+  }
+  .padding-layout-header {
+    padding: 20px 40px;
+  }
+  .card-width {
+    width:100%
+  }
+
+  .form-between {
+    padding-left: 0px;
+  }
+}

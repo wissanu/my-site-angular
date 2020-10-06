@@ -1,0 +1,13 @@
+<svg width="1440" height="1024" viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Desktop - 1" clip-path="url(#clip0)">
+<rect width="1440" height="1024" fill="white"/>
+<rect id="Rectangle 1" opacity="0.6" y="350" width="1440" height="359" fill="#B0AEFF"/>
+<path id="Vector 1" opacity="0.3" d="M254 183.5L374.5 3H0V537.5L254 183.5Z" fill="#110DC5" stroke="#1D1AC2"/>
+<path id="Vector 2" opacity="0.3" d="M0 1029L486.294 0H509L346.744 1029H0Z" fill="#1D1AC2" stroke="#1D1AC2"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="1440" height="1024" fill="white"/>
+</clipPath>
+</defs>
+</svg>

@@ -1,0 +1,48 @@
+
+/* add hover to button */
+button:hover {
+  color: bisque;
+}
+
+/* disable hover effect and change color of angular material button */
+.mat-flat-button, .mat-raised-button, .mat-fab, .mat-mini-fab{
+    color: white;
+    background-color: transparent;
+}
+
+#bg-light {
+  /*background : linear-gradient(320deg,#082fa5,#42a5f5);*/
+  background : #404040;
+  color: white;
+}
+
+#bg-light #cont {
+  max-width: 90%;
+  margin: 0 auto;
+  flex: 1 1 auto;
+  justify-content: space-between;
+}
+
+#logo-space {
+  margin: auto;
+  float:left;
+  padding-top: 10px;
+}
+
+#logo-space:hover {
+  opacity: 0.3;
+  filter: drop-shadow(0 -6mm 4mm rgb(96, 96, 86));
+}
+
+#white-text {
+  color: white;
+}
+
+button.mat-menu-item {
+    text-align: center;
+}
+
+/* fix gutter size won't work with border */
+.border-fill {
+  border: 2px solid #404040;
+}

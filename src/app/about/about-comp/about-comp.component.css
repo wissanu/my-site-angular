@@ -1,0 +1,79 @@
+
+
+/* image */
+
+.purple-img {
+  width: 100%;
+  background-image: url('/assets/img/about3.svg');
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: cover;
+}
+
+.robot-img-3 {
+  width: 50%;
+  background-size: 100% 100%;
+  padding: 20px 20px;
+  margin: auto;
+}
+
+/* modify text title css */
+.mat-title {
+  color: white;
+  font-size: 18px;
+  font-family: Roboto;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.3ch;
+}
+
+.mat-title-header {
+  color: white;
+  font-size: 24px;
+  font-family: Roboto;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.3ch;
+}
+
+
+/* On screens that are 992px or less */
+@media screen and (max-width: 960px) {
+  .mat-title {
+    font-size: 16px;
+  }
+  .mat-title-header {
+    font-size: 24px;
+  }
+}
+
+/* On screens that are 750px or less */
+@media screen and (max-width: 750px) {
+  .mat-title {
+    font-size: 14px;
+  }
+  .mat-title-header {
+    font-size: 20px;
+  }
+  .padding-layout {
+    padding: 40px 80px;
+  }
+  .padding-layout-header {
+    padding: 80px 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .mat-title {
+    font-size: 14px;
+  }
+  .mat-title-header {
+    font-size: 18px;
+  }
+  .padding-layout {
+    padding: 20px 40px;
+  }
+  .padding-layout-header {
+    padding: 20px 40px;
+  }
+}

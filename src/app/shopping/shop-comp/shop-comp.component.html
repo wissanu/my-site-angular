@@ -1,0 +1,34 @@
+<!-- Content 3 -->
+<div fxLayout="row wrap" fxLayoutAlign="center center" [ngStyle]="{'background-color':'#B6ADF7', 'height':'250px'}">
+  <!--<div fxLayout=row fxFlex="20%" fxFlex.xs="0 0 0"></div>-->
+  <div fxLayout=row fxFlex="100%" fxLayoutAlign="center center">
+  <h1 class="mat-title" [ngStyle]="{'color':'#645e8e', 'font-weight':'bold'}">Searching An Item</h1>
+  </div>
+    <input [(ngModel)]="searchText" class="search__input" type="text" placeholder="Search">
+</div>
+
+<!-- use Grid instead -->
+<div [ngStyle]="{'background-color':'#F8F9FA'}">
+  <div class="space_body">
+    <div fxLayout="row wrap" fxLayout.xs="column warp" fxLayoutAlign="space between">
+      <div *ngFor="let item of itemcards | search: searchText;" class="item-header" fxLayout.xs="column" fxFlex="25%" fxFlex.sm="30%" fxFlex.xs="0 0 100%">
+        <div fxLayout=row fxLayout.xs=column fxFlex="0 0 100%" fxFlex.xs="0 0 50%">
+          <div [routerLink]="['/orders', item.id]" class="padding-layout" id="move_card">
+            <mat-card appCardelevetion defaultElevation=2 raisedElevation=16>
+              <mat-card-header>
+                <mat-card-title>{{item.title}}</mat-card-title>
+              </mat-card-header>
+              <img mat-card-image src="assets/img/pexels-hasan-albari-1229861.jpg" alt="Photo of a Shiba Inu">
+              <mat-card-content>
+                <p>
+                  {{item.tag}}
+                </p>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Content 3 -->

@@ -1,0 +1,102 @@
+<!-- Content 1 -->
+<div fxLayout="row wrap" fxLayout.xs="column warp" fxLayoutAlign="start center" [ngStyle]="{'background-color':'#B6ADF7'}">
+  <div fxLayout=column fxFlex="10%" fxFlex.xs="0 0 0"></div>
+  <div class="item-header" fxLayout.xs="column" fxFlex="50%" fxFlex.xs="0 0 100%">
+    <!--<div fxLayout=column fxFlex="0 0 12.5%" fxFlex.xs="0 0 0"></div>-->
+    <div class="item-header" fxFlex="0 0 100%">
+      <div *ngFor="let order of orders" class="padding-layout" fxLayout="column" fxLayoutAlign="center stretch" fxFlex="0 0 100%">
+          <div id="bg-panel-text">
+            <h1 class="mat-title-header" [ngStyle]="{'color':'antiquewhite', 'font-weight':'bold', 'text-transform': 'uppercase'}">
+              {{ order.title }}
+            </h1>
+          </div>
+          <div *ngFor="let order_context of order.context" id="bg-panel-text">
+            <h1 class="mat-title" [ngStyle]="{'color':'ghostwhite', 'font-weight':'100'}">
+              &ensp;{{order_context}}
+            </h1>
+          </div>
+          <mat-chip-list>
+            <mat-chip [ngStyle]="{'background-color':'gold'}">tag : {{ order.tag }}</mat-chip>
+          </mat-chip-list>
+      </div>
+    </div>
+  </div>
+  <div fxLayout=column fxFlex="5%" fxFlex.xs="0 0 0"></div>
+
+  <div class="item-header" fxFlex="20%" fxFlex.sm="30%" fxShow.xs="false">
+    <div fxLayout=column fxFlex="100%" fxFlex.sm="100%">
+      <img src="assets/img/order1.jpg" class="img-order" [ngStyle]="{'border-radius': '30px'}"/>
+      <div class="shape__shadow"></div>
+    </div>
+  </div>
+</div>
+<!-- Content 1 -->
+
+<div [ngStyle]="{'background-color':'#F8F9FA'}">
+  <!--<br><br>-->
+  <!-- Content 2 -->
+  <!--<div class="space_body_order" [ngStyle]="{'width': '100%'}">
+    <div fxLayout=column fxFlex="10%" fxFlex.xs="0 0 0"></div>
+        <mat-card class="card-width" [ngStyle]="{'background-color':'rgb(255 255 232)', 'color': 'rgb(74 69 69)', 'font-size':'13px', 'border-radius':'10px', 'padding':'10px', 'font-weight':'400', 'text-align':'center'}">
+          *Note: fill the information for contact us through email below. we will contact you immediately to discuss about your requirements.
+        </mat-card>
+  </div>-->
+  <!-- Content 2 -->
+
+  <!-- Content 3 -->
+  <div class="space_body_order">
+    <div fxLayout=column fxFlex="10%" fxFlex.xs="0 0 0"></div>
+
+      <!-- form for gt-xs -->
+      <mat-card class="card-width">
+      <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+          <!--Value: {{ profileForm.value | json }} -->
+          <br>
+          <h3>Fullname</h3>
+          <mat-form-field >
+              <mat-label>First Name:</mat-label>
+              <input matInput type="text" formControlName="firstName" />
+          </mat-form-field>
+          <mat-form-field class="form-between">
+              <mat-label>Last Name:</mat-label>
+              <input matInput type="text" formControlName="lastName" />
+          </mat-form-field>
+          <div formGroupName="address">
+              <h3>Address</h3>
+              <mat-form-field >
+                  <mat-label>Street:</mat-label>
+                  <input matInput type="text" formControlName="street" />
+              </mat-form-field>
+              <br>
+              <mat-form-field >
+                  <mat-label>City:</mat-label>
+                  <input matInput type="text" formControlName="city" />
+              </mat-form-field>
+              <br>
+              <mat-form-field >
+                  <mat-label>Province:</mat-label>
+                  <input matInput type="text" formControlName="province" />
+              </mat-form-field>
+              <br>
+              <mat-form-field >
+                  <mat-label>Zip Code:</mat-label>
+                  <input matInput type="text" formControlName="zip" />
+              </mat-form-field>
+          </div>
+          <br>
+          <h3>Phone Number</h3>
+          <mat-form-field >
+              <mat-label>Phone Number:</mat-label>
+              <input matInput type="text" formControlName="phone" />
+          </mat-form-field>
+          <mat-divider></mat-divider>
+          <br><br>
+          <button mat-flat-button color="primary" [disabled]="!profileForm.valid">
+            Submit
+          </button>
+      </form>
+      </mat-card>
+      <!-- form for gt-xs -->
+  </div>
+</div>
+<!-- Content 3 -->

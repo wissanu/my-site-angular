@@ -1,0 +1,87 @@
+<mat-toolbar fxLayout="row" id="bg-light">
+  <div id="cont">
+    <span fxFlex>
+      <a routerLink="">
+        <img id="logo-space" src="assets/logo/logo_transparent.svg" alt="triangle with all three sides equal" height="87" width="100" />
+      </a>
+    </span>
+    <button mat-flat-button *ngFor="let item of menuitem"
+        [fxShow]="item.showOnDesktop"
+        [fxShow.xs]="item.showOnMobile"
+        [fxShow.sm]="item.showOnTablet"
+        [routerLink]="item.link">
+        <mat-icon class="mr">{{item.icon}}</mat-icon>
+        {{item.label}}
+    </button>
+    </div>
+    <ng-container>
+        <button mat-icon-button [matMenuTriggerFor]="dropMenu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #dropMenu="matMenu">
+            <ng-container *ngFor="let item of menuitem">
+                <div [fxShow]="!item.showOnDesktop"
+                     [fxShow.sm]="!item.showOnTablet"
+                     [fxShow.xs]="!item.showOnMobile"
+                     [routerLink]="item.link">
+                    <button mat-menu-item>
+                        <mat-icon class="mr">{{item.icon}}</mat-icon>
+                         {{item.label}}
+                    </button>
+                    <mat-divider></mat-divider>
+                </div>
+            </ng-container>
+        </mat-menu>
+    </ng-container>
+
+</mat-toolbar>
+<router-outlet></router-outlet>
+<!-- Top Footer -->
+  <!-- Footer for tablet and greater size -->
+  <mat-grid-list cols="1" rowHeight="80px" gutterSize="0" fxShow.xs="false" fxShow.gt-xs="true">
+    <mat-grid-list class="border-fill" cols="12" rowHeight="80px" gutterSize="0" >
+      <mat-grid-tile
+          [colspan]="4"
+          [rowspan]="1"
+          [ngStyle]="{'color':'white', 'background-color': '#404040'}">
+      </mat-grid-tile>
+      <mat-grid-tile class="border-fill" *ngFor="let tile of tiles1"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.background]="tile.color"
+        [ngStyle]="{'color':'white'}"
+        gutterSize="0px">
+        <button id="white-text" mat-menu-item>{{tile.text}}</button>
+      </mat-grid-tile>
+      <mat-grid-tile class="border-fill"
+          [colspan]="4"
+          [rowspan]="1"
+          [ngStyle]="{'color':'white', 'background-color': '#404040'}">
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-grid-list>
+
+  <!-- Footer for mobile size -->
+  <mat-grid-list cols="4" rowHeight="80px" gutterSize="0" fxShow.xs="true" fxShow.gt-xs="false">
+      <mat-grid-tile class="border-fill" *ngFor="let tile of tiles1"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.background]="tile.color"
+        [ngStyle]="{'color':'white'}">
+        <button id="white-text" mat-menu-item>{{tile.text}}</button>
+      </mat-grid-tile>
+  </mat-grid-list>
+<!-- End : Top Footer -->
+
+<!-- Last Footer -->
+<mat-grid-list cols="4" rowHeight="42px" gutterSize="0px">
+  <mat-grid-tile
+      *ngFor="let tile of tiles2"
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+      [style.background]="tile.color"
+      [ngStyle]="{'color':'white'}">
+    {{tile.text}}
+  </mat-grid-tile>
+</mat-grid-list>
+<!-- End : Last Footer -->

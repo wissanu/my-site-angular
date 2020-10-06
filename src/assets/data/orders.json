@@ -1,0 +1,40 @@
+[
+      {
+            "itemId": 1,
+            "title": "Clinical Mangagement System",
+            "context": [
+                "Coming Soon",
+                "This project are currently on development.",
+                "We offer a contract for your safety. So, you don't need to worry about evaded responsibility."
+            ],
+            "tag": "Finished Product"
+      },
+      {
+            "itemId": 2,
+            "title": "Aparment Mangagement System",
+            "context": [
+                "Coming Soon",
+                "This project are currently on development.",
+                "We offer a contract for your safety. So, you don't need to worry about evaded responsibility."
+            ],
+            "tag": "Finished Product"
+      },
+      {
+            "itemId": 3,
+            "title": "Web Site",
+            "context": [
+                "We are providing a web site from your request with reasonable prices.  You can ask us more details about this works.",
+                "We offer a contract for your safety. So, you don't need to worry about evaded responsibility."
+            ],
+            "tag": "Request Product"
+      },
+      {
+            "itemId": 4,
+            "title": "Bussiness Model",
+            "context": [
+                "We are providing a model or solution for helping you solve your bussniess issues with data science. You can ask us more details about this works.",
+                "We offer a contract for your safety. So, you don't need to worry about evaded responsibility."
+            ],
+            "tag" : "Request Product"
+      }
+]
