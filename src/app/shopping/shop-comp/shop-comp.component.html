@@ -1,10 +1,10 @@
 <!-- Content 3 -->
-<div fxLayout="row wrap" fxLayoutAlign="center center" [ngStyle]="{'background-color':'#B6ADF7', 'height':'250px'}">
+<div fxLayout="row wrap" fxLayoutAlign="center center" [ngStyle]="{'background-color':'#B6ADF7', 'height':'250px','padding-top':'64px'}">
   <!--<div fxLayout=row fxFlex="20%" fxFlex.xs="0 0 0"></div>-->
   <div fxLayout=row fxFlex="100%" fxLayoutAlign="center center">
-  <h1 class="mat-title" [ngStyle]="{'color':'#645e8e', 'font-weight':'bold'}">Searching An Item</h1>
+  <h1 class="mat-title" [ngStyle]="{'color':'#645e8e', 'font-weight':'bold'}">{{ 'Search-title' | translate}}</h1>
   </div>
-    <input [(ngModel)]="searchText" class="search__input" type="text" placeholder="Search">
+    <input [(ngModel)]="searchText" class="search__input" type="text" placeholder="{{ 'Search-text' | translate}}">
 </div>
 
 <!-- use Grid instead -->

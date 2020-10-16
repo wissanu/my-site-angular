@@ -1,0 +1,40 @@
+{
+    "Header-title": "Creating your web application and bussiness model.",
+    "Header-content": [
+                        "Providing product from your request, front-end, back-end, logo-design and mobile application.",
+                        "Fast and Reliable product served with performance.",
+                        "Maintenance services provided."
+                      ],
+    "Feature-header": "Our Features",
+    "Feature-details": "There are finished product, with requested work. contract agreement are signed for your safety with fast and reliable can be trusted.",
+    "Cart-header": "Our Finished Project",
+    "Cart-details": "These are finished product which created for sales only and requested products.",
+    "Card-cart-title": "Shopping",
+    "Card-cart-sub-title": "Various products and services offered.",
+    "Card-cart-details": "Directly a shopping pages for ordering your own new website or choose the available products.",
+    "Cart-button": "Go Shopping",
+    "Hub-header": "Our Knowledge Created as Resource Hub",
+    "Hub-details": "A Resource hub created for everybody who interests in developed your own products.",
+    "Card-hub-details": "This is resource of Knowledge, called knowledge hub, is created from ourselves for the purpose of keeping everything which learned about coding. This resource hub is updated every week by now.",
+    "Hub-button": "Go Resource",
+    "Search-title": "Searching An Item",
+    "Search-text" : "Search",
+    "Order-tag" : "tag",
+    "Order-title-fullname": "Fullname",
+    "Order-name": "Firstname",
+    "Order-lastname": "Lastname",
+    "Order-title-address": "Address",
+    "Order-street": "Street",
+    "Order-city": "City",
+    "Order-province": "Province",
+    "Order-zip": "Zip Code",
+    "Order-phone-title": "Phone Number",
+    "Order-phone": "Phone Number",
+    "Order-submit": "Submit",
+    "Resource-header" : "Coming Soon",
+    "About-header": "Inspire and serve",
+    "About-details": "Hire us, or just say hi! We’d love to hear from you!. Or you can contact us here.",
+    "About-phone" : "TEL : 089-934-0993"
+
+
+}

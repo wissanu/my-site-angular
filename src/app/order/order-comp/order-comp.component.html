@@ -1,5 +1,5 @@
 <!-- Content 1 -->
-<div fxLayout="row wrap" fxLayout.xs="column warp" fxLayoutAlign="start center" [ngStyle]="{'background-color':'#B6ADF7'}">
+<div fxLayout="row wrap" fxLayout.xs="column warp" fxLayoutAlign="start center" [ngStyle]="{'background-color':'#B6ADF7','padding-top':'64px'}">
   <div fxLayout=column fxFlex="10%" fxFlex.xs="0 0 0"></div>
   <div class="item-header" fxLayout.xs="column" fxFlex="50%" fxFlex.xs="0 0 100%">
     <!--<div fxLayout=column fxFlex="0 0 12.5%" fxFlex.xs="0 0 0"></div>-->
@@ -16,7 +16,7 @@
             </h1>
           </div>
           <mat-chip-list>
-            <mat-chip [ngStyle]="{'background-color':'gold'}">tag : {{ order.tag }}</mat-chip>
+            <mat-chip [ngStyle]="{'background-color':'gold'}">{{ 'Order-tag' | translate}} : {{ order.tag }}</mat-chip>
           </mat-chip-list>
       </div>
     </div>
@@ -52,47 +52,47 @@
       <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
           <!--Value: {{ profileForm.value | json }} -->
           <br>
-          <h3>Fullname</h3>
+          <h3>{{ 'Order-title-fullname' | translate}}</h3>
           <mat-form-field >
-              <mat-label>First Name:</mat-label>
+              <mat-label>{{ 'Order-name' | translate}}:</mat-label>
               <input matInput type="text" formControlName="firstName" />
           </mat-form-field>
           <mat-form-field class="form-between">
-              <mat-label>Last Name:</mat-label>
+              <mat-label>{{ 'Order-lastname' | translate}}:</mat-label>
               <input matInput type="text" formControlName="lastName" />
           </mat-form-field>
           <div formGroupName="address">
-              <h3>Address</h3>
+              <h3>{{ 'Order-title-address' | translate}}</h3>
               <mat-form-field >
-                  <mat-label>Street:</mat-label>
+                  <mat-label>{{ 'Order-street' | translate }}:</mat-label>
                   <input matInput type="text" formControlName="street" />
               </mat-form-field>
               <br>
               <mat-form-field >
-                  <mat-label>City:</mat-label>
+                  <mat-label>{{ 'Order-city' | translate}}:</mat-label>
                   <input matInput type="text" formControlName="city" />
               </mat-form-field>
               <br>
               <mat-form-field >
-                  <mat-label>Province:</mat-label>
+                  <mat-label>{{ 'Order-province' | translate}}:</mat-label>
                   <input matInput type="text" formControlName="province" />
               </mat-form-field>
               <br>
               <mat-form-field >
-                  <mat-label>Zip Code:</mat-label>
+                  <mat-label>{{ 'Order-zip' | translate}}:</mat-label>
                   <input matInput type="text" formControlName="zip" />
               </mat-form-field>
           </div>
           <br>
-          <h3>Phone Number</h3>
+          <h3>{{ 'Order-phone-title' | translate}}</h3>
           <mat-form-field >
-              <mat-label>Phone Number:</mat-label>
+              <mat-label>{{ 'Order-phone' | translate }}:</mat-label>
               <input matInput type="text" formControlName="phone" />
           </mat-form-field>
           <mat-divider></mat-divider>
           <br><br>
           <button mat-flat-button color="primary" [disabled]="!profileForm.valid">
-            Submit
+            {{ 'Order-submit' | translate}}
           </button>
       </form>
       </mat-card>

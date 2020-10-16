@@ -7,6 +7,11 @@ export interface MenuItem {
   link: string;
 }
 
+export interface LangTile{
+  lang_shortname: string;
+  lang_fullname: string;
+}
+
 export interface Tile {
   color: string;
   cols: number;

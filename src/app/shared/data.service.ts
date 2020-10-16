@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from "rxjs"
 import { map, catchError } from 'rxjs/operators';
+import { GlobalConstants } from '../common/GlobalConstants';
 
 import { IPost, IOrder } from '../shared/menu-item';
 
@@ -10,18 +11,32 @@ import { IPost, IOrder } from '../shared/menu-item';
 export class DataService {
 
     baseUrl: string = 'assets/data/';
+    Item_page:string = '';
+    Order_page:string = '';
+
+
 
     constructor(private http: HttpClient) { }
 
     getItems() : Observable<IPost[]> {
-       return this.http.get<IPost[]>(this.baseUrl + 'items.json')
+      if (GlobalConstants.language === 'th')
+        this.Item_page = 'items_th.json'
+      else if (GlobalConstants.language === 'en')
+        this.Item_page = 'items_en.json'
+
+       return this.http.get<IPost[]>(this.baseUrl + this.Item_page)
            .pipe(
                catchError(this.handleError)
            );
    }
 
    getItem(id: number) : Observable<IPost> {
-     return this.http.get<IPost[]>(this.baseUrl + 'items.json')
+     if (GlobalConstants.language === 'th')
+       this.Item_page = 'items_th.json'
+     else if (GlobalConstants.language === 'en')
+       this.Item_page = 'items_en.json'
+
+     return this.http.get<IPost[]>(this.baseUrl + this.Item_page)
        .pipe(
          map(customers => {
            let customer = customers.filter((cust: IPost) => cust.id === id);
@@ -32,7 +47,12 @@ export class DataService {
    }
 
    getOrders(id: number) : Observable<IOrder[]> {
-     return this.http.get<IOrder[]>(this.baseUrl + 'orders.json')
+     if (GlobalConstants.language === 'th')
+       this.Order_page = 'orders_th.json'
+     else if (GlobalConstants.language === 'en')
+       this.Order_page = 'orders_en.json'
+       
+     return this.http.get<IOrder[]>(this.baseUrl + this.Order_page)
        .pipe(
          map(orders => {
            let custOrders = orders.filter((order: IOrder) => order.itemId === id);

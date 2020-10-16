@@ -3,7 +3,9 @@ import { Router, ActivatedRoute, Params } from '@angular/router';
 import { DataService } from '../../shared/data.service';
 import { IOrder, IPost } from '../../shared/menu-item';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-
+import { TranslateService } from '@ngx-translate/core';
+import { I18nService } from '../../shared/i18n.service';
+import { GlobalConstants } from '../../common/GlobalConstants';
 
 
 @Component({
@@ -12,7 +14,7 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
   styleUrls: ['./order-comp.component.css']
 })
 export class OrderCompComponent implements OnInit {
-
+  current:string = GlobalConstants.language;
   public orders: IOrder[] = [];
   public item: IPost;
   isLinear = true;
@@ -27,9 +29,16 @@ export class OrderCompComponent implements OnInit {
     }),
     phone: ['', Validators.required],
   });
-  constructor(private dataservice: DataService, private route: ActivatedRoute, private _formBuilder: FormBuilder) { }
+  constructor(private dataservice: DataService, private route: ActivatedRoute, private _formBuilder: FormBuilder, private translate: TranslateService, private i18nlang: I18nService)
+  {
+    translate.setDefaultLang('th');
+    translate.use(this.current);
+  }
 
   ngOnInit(): void {
+
+    this.i18nlang.localeEvent.subscribe(locale => this.translate.use(locale));
+
     // service invoked
     let id = +this.route.snapshot.paramMap.get('id');
     console.log(this.route.snapshot.params.id);

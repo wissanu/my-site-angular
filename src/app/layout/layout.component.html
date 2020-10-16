@@ -1,10 +1,13 @@
-<mat-toolbar fxLayout="row" id="bg-light">
+<mat-toolbar fxLayout="row" id="bg-light" class="fixed-top">
   <div id="cont">
-    <span fxFlex>
+    <span fxFlex [ngStyle]="{'height':'64px'}">
       <a routerLink="">
-        <img id="logo-space" src="assets/logo/logo_transparent.svg" alt="triangle with all three sides equal" height="87" width="100" />
+        <img id="logo-space" src="assets/logo/logo_transparent.svg" alt="triangle with all three sides equal" [ngStyle]="{'height':'64px'}"/>
       </a>
     </span>
+    <select class="select-box" #locale (change)="switchlanguage(locale.value)">
+      <option *ngFor="let i of lang_tile" value="{{ i.lang_shortname }}">{{ i.lang_fullname}}</option>
+    </select>
     <button mat-flat-button *ngFor="let item of menuitem"
         [fxShow]="item.showOnDesktop"
         [fxShow.xs]="item.showOnMobile"

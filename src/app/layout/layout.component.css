@@ -4,6 +4,12 @@ button:hover {
   color: bisque;
 }
 
+/* fixed top navbar */
+.fixed-top {
+  position: fixed;
+  z-index: 999;
+}
+
 /* disable hover effect and change color of angular material button */
 .mat-flat-button, .mat-raised-button, .mat-fab, .mat-mini-fab{
     color: white;
@@ -23,10 +29,19 @@ button:hover {
   justify-content: space-between;
 }
 
+.select-box {
+  border: 0px;
+  background-color: transparent;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  font-weight: 600;
+}
+
 #logo-space {
   margin: auto;
   float:left;
-  padding-top: 10px;
+  padding-top: 5px;
 }
 
 #logo-space:hover {
